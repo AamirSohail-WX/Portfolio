@@ -27,6 +27,7 @@ body {
     radial-gradient(circle at top left, rgba(83, 240, 255, 0.16), transparent 28%),
     radial-gradient(circle at bottom right, rgba(181, 135, 255, 0.18), transparent 24%),
     var(--bg);
+  line-height: 1.6;
 }
 
 @keyframes fadeUp {
@@ -320,6 +321,14 @@ img {
   padding: 24px clamp(20px, 4vw, 40px) 56px;
 }
 
+.learning-section {
+  padding-top: 0;
+}
+
+.learning-grid {
+  margin-top: 8px;
+}
+
 .strength-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -329,6 +338,13 @@ img {
 .stat-card {
   padding: 20px;
   text-align: center;
+}
+
+.learning-card {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .stat-card h4 {
@@ -345,7 +361,8 @@ img {
 @media (max-width: 960px) {
   .page-hero,
   .skills-grid,
-  .strength-grid {
+  .strength-grid,
+  .learning-grid {
     grid-template-columns: 1fr;
   }
 }

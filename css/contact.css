@@ -27,6 +27,7 @@ body {
     radial-gradient(circle at top left, rgba(83, 240, 255, 0.16), transparent 28%),
     radial-gradient(circle at bottom right, rgba(181, 135, 255, 0.18), transparent 24%),
     var(--bg);
+  line-height: 1.6;
 }
 
 @keyframes fadeUp {

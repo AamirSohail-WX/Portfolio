@@ -27,6 +27,7 @@ body {
     radial-gradient(circle at top left, rgba(83, 240, 255, 0.16), transparent 28%),
     radial-gradient(circle at bottom right, rgba(181, 135, 255, 0.18), transparent 24%),
     var(--bg);
+  line-height: 1.6;
 }
 
 @keyframes fadeUp {
@@ -304,6 +305,50 @@ img {
   object-fit: cover;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.feature-item {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+}
+
+.feature-item h4 {
+  margin: 0 0 6px;
+  color: var(--text);
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.book-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.book-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.book-info {
+  padding: 12px;
+  color: var(--text);
+  font-weight: 600;
 }
 
 .profile-card-content {

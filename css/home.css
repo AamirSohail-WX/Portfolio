@@ -777,7 +777,7 @@ img {
   height: 22px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
   .hero,
   .page-hero,
   .skills-grid,
@@ -847,7 +847,7 @@ img {
 @media (max-width: 600px) {
   .main2,
   .tech-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-actions,
@@ -997,7 +997,7 @@ img {
   }
 
   .tech-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 .project-link{

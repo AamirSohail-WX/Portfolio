@@ -1,3 +1,103 @@
+.intro-screen {
+    height: 100vh;
+    width: 100%;
+
+    position: relative;
+
+    background-image: url("../images/background-overlay.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* Dark overlay */
+
+.intro-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+}
+
+
+/* Welcome text */
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+}
+
+
+.intro-content h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: clamp(50px, 10vw, 130px);
+
+    font-weight: 700;
+
+    letter-spacing: 15px;
+}
+
+
+/* Scroll indicator */
+
+.scroll-down {
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+
+.scroll-down .arrow {
+    margin-top: 15px;
+
+    font-size: 30px;
+
+    animation: scrollArrow 1.5s infinite;
+}
+
+
+/* Arrow animation */
+
+@keyframes scrollArrow {
+
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(10px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+
 :root {
   --bg: #020710;
   --bg-soft: #071221;

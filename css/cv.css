@@ -53,6 +53,10 @@ img { display: block; max-width: 100%; }
 .ul{
   color: black;
 }
+.aspir{
+  font-size: 23px;
+  
+}
 .profile-list {
   list-style: none;
   padding: 0;

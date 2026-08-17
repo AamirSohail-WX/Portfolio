@@ -294,13 +294,54 @@ img {
 
 .info-card p,
 .info-card a {
-  color: var(--muted);
+  color:white;
   line-height: 1.7;
 }
 
-.info-card a {
+.contact-link {
   display: inline-block;
-  margin-top: 6px;
+  margin-top: 12px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgb(4, 4, 128);
+  color: #04121b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-2px);
+}
+
+.location-note {
+  font-size: 0.9rem;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(83, 240, 255, 0.12);
+  border: 1px solid rgba(83, 240, 255, 0.25);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(83, 240, 255, 0.2);
+  transform: translateY(-3px);
 }
 
 @media (max-width: 960px) {

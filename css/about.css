@@ -191,12 +191,10 @@ img {
   animation: pulseGlow 2.4s ease-in-out infinite;
   background-size: 200% 100%;
 }
-
 .btnview:hover,
 .btn-outline:hover {
   animation: shimmer 1.2s linear infinite;
 }
-
 .about-hero,
 .about-grid,
 .stats-section,
@@ -377,7 +375,7 @@ img {
 }
 
 .about-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   padding-top: 24px;

@@ -4,7 +4,7 @@
 
     position: relative;
 
-    background-image: url("../images/background-overlay.png");
+    background-image: linear-gradient(rgba(5, 10, 25, 0.65), rgba(5, 10, 25, 0.75)),url("../images/background-overlay.png");
     background-size: cover;
     background-position: center;
 
@@ -15,9 +15,6 @@
     overflow: hidden;
 }
 
-
-/* Dark overlay */
-
 .intro-overlay {
     position: absolute;
 
@@ -25,9 +22,6 @@
 
     background: rgba(0, 0, 0, 0.55);
 }
-
-
-/* Welcome text */
 
 .intro-content {
     position: relative;
@@ -48,9 +42,6 @@
 
     letter-spacing: 15px;
 }
-
-
-/* Scroll indicator */
 
 .scroll-down {
     margin-top: 100px;
@@ -76,7 +67,6 @@
 }
 
 
-/* Arrow animation */
 
 @keyframes scrollArrow {
 
@@ -342,10 +332,15 @@ img {
   letter-spacing: 0.3em;
   text-transform: uppercase;
 }
-
+.hello{
+  color: white;
+}
 .aamir {
   margin: 0;
-  color: var(--text);
+  background: linear-gradient(135deg, #53f0ff 0%, #b587ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: clamp(3rem, 7vw, 5.5rem);
   font-weight: 800;
   line-height: 0.95;
@@ -382,18 +377,22 @@ img {
 }
 
 .btnview {
-  padding: 13px 22px;
+  padding: 12px 24px;
   background: linear-gradient(135deg, var(--accent), #12c7ff);
   color: #041018;
   font-weight: 700;
+  font-size: 0.95rem;
   box-shadow: 0 0 24px rgba(83, 240, 255, 0.24);
+  border: none;
 }
 
 .btn-outline {
-  padding: 13px 22px;
+  padding: 12px 24px;
   color: var(--text);
-  border: 1px solid rgba(83, 240, 255, 0.35);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(83, 240, 255, 0.35);
+  background: transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .con {
@@ -462,7 +461,7 @@ img {
 .feature-card,
 .hero-card,
 .skill-card,
-.project-card,
+
 .info-card,
 .stat-card {
   background: var(--panel);
@@ -470,7 +469,12 @@ img {
   border-radius: 20px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
 }
-
+.project-card{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+}
 .feature-card {
   padding: 24px 18px;
   text-align: center;
@@ -480,10 +484,14 @@ img {
   justify-content: flex-start;
 }
 
+
+.ok{
+  padding-left: 40px;
+  padding-right:80px;
+}
 .feature-card:hover,
 .hero-card:hover,
 .skill-card:hover,
-.project-card:hover,
 .info-card:hover,
 .stat-card:hover {
   transform: translateY(-2px);
@@ -574,46 +582,10 @@ img {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
-.preview-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  padding: 0 clamp(20px, 4vw, 40px) 24px;
-}
-
-.preview-card {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 14px 40px rgba(0,0,0,0.18);
-}
-
-.preview-card h3 {
-  margin: 0 0 8px;
-  color: var(--text);
-}
-
-.preview-card p {
-  color: var(--muted);
-  margin: 0 0 12px;
-}
-
-.preview-card a,
 .all-link {
   color: var(--accent);
   font-weight: 600;
 }
-
-.project-preview {
-  padding: 0 clamp(20px, 4vw, 40px) 56px;
-}
-
-.project-preview .project-card {
-  max-width: 520px;
-}
-
 .section-heading {
   display: flex;
   align-items: baseline;
@@ -635,18 +607,19 @@ img {
 }
 
 .tech-pill {
-  min-height: 120px;
+  min-height: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 16px 12px;
+  padding: 18px 14px;
   text-align: center;
-  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(83, 240, 255, 0.08));
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, rgba(83, 240, 255, 0.06), rgba(181, 135, 255, 0.06));
+  border: 1.2px solid rgba(83, 240, 255, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(83, 240, 255, 0.08);
+  transition: all 0.3s ease;
 }
 
 .tech-pill img {
@@ -659,6 +632,7 @@ img {
   margin: 0;
   color: var(--text);
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 1000px) {
@@ -699,7 +673,6 @@ img {
 .hero-card h2,
 .hero-card h3,
 .info-card h3,
-.project-card h3,
 .skill-card h3 {
   margin-top: 0;
   color: var(--text);
@@ -735,7 +708,6 @@ img {
 }
 
 .skills-grid,
-.projects-grid,
 .contact-grid {
   max-width: 1250px;
   margin: 24px auto 0;
@@ -819,37 +791,22 @@ img {
   color: var(--accent);
 }
 
-.projects-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.project-card {
-  overflow: hidden;
-}
-
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.project-content {
-  padding: 20px;
-}
-
 .tag-row {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin: 14px 0;
+  margin-top: auto;
 }
 
 .tag {
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 999px;
-  background: rgba(83, 240, 255, 0.1);
+  background: rgba(83, 240, 255, 0.12);
   color: var(--accent);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 0.5px solid rgba(83, 240, 255, 0.2);
 }
 
 .contact-grid {
@@ -881,7 +838,6 @@ img {
   .hero,
   .page-hero,
   .skills-grid,
-  .projects-grid,
   .contact-grid,
   .strength-grid,
   .highlight-grid {
@@ -892,8 +848,7 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .info-stack,
-  .preview-grid {
+  .info-stack{
     grid-template-columns: 1fr;
   }
 
@@ -982,7 +937,6 @@ img {
   .strength-section,
   .highlights-section,
   .skills-grid,
-  .projects-grid,
   .contact-grid {
     padding-left: 14px;
     padding-right: 14px;
@@ -1100,6 +1054,87 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-.project-link{
-  color: white;
+.project-card:hover{
+   transform: translateY(-6px) scale(1.02);
+  border-color: rgba(83, 240, 255, 0.45);
+  box-shadow: 0 14px 24px rgba(83, 240, 255, 0.14);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+.project-card {
+  animation: fadeUp 0.8s ease both;
+}
+.project-link {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+  background-size: 200% 100%;
+}
+.project-link:hover {
+  animation: shimmer 1.2s linear infinite;
+}
+.projects-grid {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.project-card p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+.project-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+}
+.projects-grid {
+  padding: 24px clamp(20px, 4vw, 40px) 56px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  overflow: hidden;
+}
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: var(--text);
+}
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: var(--text);
+  border: 1px solid rgba(83, 240, 255, 0.28);
+  background: rgba(255, 255, 255, 0.05);
+}
+@media (max-width: 960px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .project-link {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .projects-grid {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+.preview-grid{
+  padding-left: 5px;
+  padding-right: 5px;
 }

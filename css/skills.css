@@ -80,7 +80,17 @@ img {
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
-
+.hok {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+        padding: 24px clamp(30px, 5vw, 50px) 56px;
+}
 .group {
   display: flex;
   align-items: center;
